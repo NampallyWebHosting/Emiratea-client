@@ -1,9 +1,11 @@
-import { Button } from "./components/ui/button"
-function App() {
+import FullScreenSvgImage from './components/internal/dummy'
+import Main from './components/internal/main'
+
+const App = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
+    <>
+      <Main />
+      <FullScreenSvgImage /></>
   )
 }
 
