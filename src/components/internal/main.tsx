@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import nav1 from "../../assets/nav1.svg";
 import nav2 from "../../assets/nav2.svg";
 import nav3 from "../../assets/nav3.svg";
+import Logo from "../../assets/Logo.svg";
 
 interface MenuItemProps {
     text: string;
@@ -76,7 +76,69 @@ const FullScreenImage: React.FC = () => {
 
                 {/* Left menu */}
                 <div className="absolute top-4 left-4 flex flex-col space-y-2">
-                    <Button variant="secondary">Left Menu</Button>
+                    <div className="relative w-[100px] h-[100px]">
+                        {/* Background Circle */}
+                        <div className="absolute inset-0 bg-[#E9CFD2] rounded-full shadow-md z-0"></div>
+
+                        {/* Central Logo */}
+                        <div className="absolute inset-0 flex items-center justify-center z-10">
+                            <img
+                                src={Logo}
+                                alt="Logo"
+                                className="w-12 h-12 md:w-12 md:h-12"
+                            />
+                        </div>
+
+                        {/* SVG Circular Text */}
+                        <svg
+                            className="absolute inset-0 w-full h-full z-20 animate-spin"
+                            style={{ animationDuration: '30s' }}
+                            viewBox="0 0 200 200"
+                        >
+                            <defs>
+                                <path
+                                    id="circlePath"
+                                    d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+                                />
+                            </defs>
+
+                            {/* First "Emiratea" */}
+                            <text fill="#000" fontSize="18" fontWeight={300}>
+                                <textPath
+                                    href="#circlePath"
+                                    startOffset="0%"
+                                    textLength="130"
+                                    spacing="auto"
+                                >
+                                    Emiratea
+                                </textPath>
+                            </text>
+
+                            {/* Second "Emiratea" */}
+                            <text fill="#000" fontSize="18" fontWeight={300}>
+                                <textPath
+                                    href="#circlePath"
+                                    startOffset="33%"
+                                    textLength="130"
+                                    spacing="auto"
+                                >
+                                    Emiratea
+                                </textPath>
+                            </text>
+
+                            {/* Third "Emiratea" */}
+                            <text fill="#000" fontSize="18" fontWeight={300} >
+                                <textPath
+                                    href="#circlePath"
+                                    startOffset="66%"
+                                    textLength="130"
+                                    spacing="auto"
+                                >
+                                    Emiratea
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
                 </div>
 
                 {/* Top right circular menus */}
