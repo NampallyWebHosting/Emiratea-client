@@ -11,7 +11,7 @@ const AddressCard: React.FC = () => {
             </h1>
             <div className="bg-white w-full max-w-6xl rounded-3xl overflow-hidden">
                 <Card className="bg-[#00966C] text-white flex flex-col-reverse md:flex-row justify-between border-none rounded-3xl p-6 md:p-10 gap-6">
-                    
+
                     {/* Left Section */}
                     <div className="flex flex-col justify-between gap-6 w-full md:w-1/2">
                         <div>
@@ -20,7 +20,7 @@ const AddressCard: React.FC = () => {
                             <p className="mt-2 text-base sm:text-lg font-normal">Open everyday</p>
                             <p className="text-base sm:text-lg font-normal">Monday to Sunday 9am - 5pm</p>
                         </div>
-                        <div className="w-32 sm:w-40 mt-auto">
+                        <div className="w-20 sm:w-40 mt-auto">
                             <img
                                 src={Logo}
                                 alt="Logo"
