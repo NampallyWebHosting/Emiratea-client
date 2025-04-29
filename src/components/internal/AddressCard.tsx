@@ -20,7 +20,7 @@ const AddressCard: React.FC = () => {
                             <p className="mt-2 text-base sm:text-lg font-normal">Open everyday</p>
                             <p className="text-base sm:text-lg font-normal">Monday to Sunday 9am - 5pm</p>
                         </div>
-                        <div className="w-20 sm:w-40 mt-auto">
+                        <div className="w-20 sm:w-24 mt-auto">
                             <img
                                 src={Logo}
                                 alt="Logo"
@@ -30,9 +30,29 @@ const AddressCard: React.FC = () => {
                     </div>
 
                     {/* Right Section with Pin */}
-                    <div className="w-full md:w-1/2 bg-white rounded-2xl flex items-center justify-center p-4">
+                    {/* <div className="w-full md:w-1/2 bg-white rounded-2xl flex items-center justify-center p-4">
                         <PinContainer title="View on Map" href="https://goo.gl/maps/xyz">
                             <img src="/pin-icon.png" alt="Location Pin" className="w-12 sm:w-16 h-12 sm:h-16" />
+                        </PinContainer>
+                    </div> */}
+                    <div className="w-full md:w-1/2 rounded-2xl flex items-center justify-center p-4">
+                        <PinContainer
+                            title="/Emiratea"
+                            href="#"
+                        >
+                            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base  text-black">
+                                    Emiratea
+                                </h3>
+                                <div className="text-base !m-0 !p-0 font-normal">
+                                    <span className="text-slate-500 ">
+                                        Emiratea
+                                        Cafe
+                                        with luv - from hyd
+                                    </span>
+                                </div>
+                                <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+                            </div>
                         </PinContainer>
                     </div>
                 </Card>

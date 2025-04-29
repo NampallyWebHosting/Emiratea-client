@@ -71,7 +71,7 @@ const ScrollSyncComponent: FC<ScrollSyncProps> = ({ sections, className }) => {
                 Emiratea
             </div>
             {/* Mobile Layout */}
-            <div className="lg:hidden flex flex-col items-center px-6 pt-10">
+            <div className="md:hidden flex flex-col items-center px-6 pt-10">
                 {sections.map((section) => (
                     <div key={section.id} className="mb-12 w-full">
                         {section.image && (
@@ -90,9 +90,9 @@ const ScrollSyncComponent: FC<ScrollSyncProps> = ({ sections, className }) => {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:flex">
+            <div className="hidden md:flex">
                 {/* Left Content (scrolls naturally) */}
-                <div className="w-1/2 pl-24 pr-6 z-20">
+                <div className="w-1/2 pl-20 lg:pl-60 pr-6 z-20">
                     {sections.map((section, index) => (
                         <div
                             key={section.id}
@@ -104,17 +104,18 @@ const ScrollSyncComponent: FC<ScrollSyncProps> = ({ sections, className }) => {
                             {section.description && (
                                 <p className="text-white text-lg font-normal mb-6">{section.description}</p>
                             )}
-                            {section.contentImage && (
-                                <img
-                                    src={section.contentImage}
-                                    alt="Content"
-                                    className="max-w-full rounded-md"
-                                />
-                            )}
+                            <div className="mt-20">
+                                {section.contentImage && (
+                                    <img
+                                        src={section.contentImage}
+                                        alt="Content"
+                                        className="w-64"
+                                    />
+                                )}
+                            </div>
                         </div>
                     ))}
                 </div>
-
                 {/* Right Sticky Image */}
                 <div className="w-1/2 h-screen sticky top-0 flex items-center justify-center pr-24 pointer-events-none z-10">
                     <img
