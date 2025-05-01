@@ -4,6 +4,7 @@ import nav1 from "../../assets/nav1.svg";
 import nav2 from "../../assets/nav2.svg";
 import nav3 from "../../assets/nav3.svg";
 import Logo from "../../assets/Logo.svg";
+import mainBg from "@/assets/Desktop - 24.svg"
 
 interface MenuItemProps {
     text: string;
@@ -61,8 +62,7 @@ const ArcTextCircle: React.FC<MenuItemProps> = ({ text, icon, bgColor }) => {
 };
 
 const FullScreenImage: React.FC = () => {
-    const imageUrl =
-        "https://s3-alpha-sig.figma.com/img/29e0/3d67/8f50f32f27e084a38007b463cd0554ae?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Tkyk5i3GI4St3~WrdwU6~FkP8JU~wkwrNF~hHWCELu7YLMLIZg0EUgmRKssHwctN-Q9NNDG4q2u9qnVF~HzOa~0u5eqHwhAh21T738FcN2~RWOhMZL-I~bgtZfifSou-72OBa33808O7DckJD0IV9V7CysQwZsqO0bYApmWNy8m0aLCvsBDjKdi2d6~i0qqvJUWD4-Hzo2ko8fz1D5VrZOHGLOT4jsXqFbFxYb--rTU2KybK05nBkiNmZqU7-v9U1YZDSGEL~eyRbfro9VoP-I35ReFRBoz0MCnl-DbCdNU0j01CSzYtlR8Yewt~jdV5K8hZTmITrrwsdbYmKu1GdQ__";
+    const imageUrl = mainBg;
 
     return (
         <Card className="w-screen h-screen p-0 border-none rounded-none shadow-none relative">
