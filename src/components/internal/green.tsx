@@ -112,7 +112,7 @@ const GreenScreen: React.FC = () => {
       {/* Grid below animation */}
       <div className="relative z-20 mt-10">
         <div className="h-screen py-20 w-full">
-          <p className=" z-20 text-center font-extrabold text-6xl text-white p-4">The Place</p>
+          <p className=" z-20 text-center font-extrabold text-6xl text-white p-4 font-Ulm-Grotesk">The Place</p>
           <LayoutGrid cards={cards} />
         </div>
       </div>

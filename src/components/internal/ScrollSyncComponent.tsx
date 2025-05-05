@@ -67,7 +67,7 @@ const ScrollSyncComponent: FC<ScrollSyncProps> = ({ sections, className }) => {
                 style={{ backgroundImage: `url(${MainImg})`, backgroundAttachment: 'fixed', zIndex: -1 }}
             ></div>
 
-            <div className="text-center pt-10 font-bold text-4xl lg:text-6xl leading-none tracking-normal text-white z-10">
+            <div className="text-center pt-14 font-bold text-4xl lg:text-6xl leading-none tracking-normal text-white z-10 font-Ulm-Grotesk">
                 Emiratea
             </div>
             {/* Mobile Layout */}
@@ -100,9 +100,9 @@ const ScrollSyncComponent: FC<ScrollSyncProps> = ({ sections, className }) => {
                             ref={setRef(index)}
                             className="min-h-screen flex flex-col justify-center py-16"
                         >
-                            <h2 className="text-4xl font-extrabold mb-4 text-white">{section.title}</h2>
+                            <h2 className="text-4xl font-extrabold mb-4 text-white font-Ulm-Grotesk">{section.title}</h2>
                             {section.description && (
-                                <p className="text-white text-lg font-normal mb-6">{section.description}</p>
+                                <p className="text-white text-lg font-normal mb-6 font-Ulm-Grotesk">{section.description}</p>
                             )}
                             <div className="mt-20">
                                 {section.contentImage && (

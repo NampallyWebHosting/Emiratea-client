@@ -149,19 +149,19 @@ const FullScreenImage: React.FC = () => {
                 </div>
 
                 {/* Text at the left bottom with typography applied */}
-                <div className="absolute bottom-30 left-14 flex items-center space-x-4 text-white z-10 text-4xl md:text-7xl">
+                <div className="absolute bottom-30 md:left-14 flex  space-x-4 text-white z-10  flex-col lg:flex-row p-2" >
                     {/* Emiratea */}
-                    <span className="font-ulm-grotesk font-extrabold leading-none tracking-tight">
+                    <span className=" text-6xl md:text-8xl font-extrabold leading-none tracking-tight font-Ulm-Grotesk">
                         Emiratea
                     </span>
                     {/* Cafe */}
-                    <span className="font-ulm-grotesk font-normal leading-none tracking-tight">
+                    <span className=" text-6xl font-normal leading-none tracking-tight font-Ulm-Grotesk md:text-8xl">
                         Cafe
                     </span>
                 </div>
 
                 {/* Footer text with Montserrat Alternates font, italic style, and custom size */}
-                <div className="absolute bottom-22 left-14 text-white text-lg md:text-2xl font-light italic tracking-normal z-10">
+                <div className="absolute bottom-22 left-2 md:left-16 font-montserrat-alt text-2xl lg:text-3xl text-white z-10 italic leading-[100%]">
                     with luv - from hyd
                 </div>
 

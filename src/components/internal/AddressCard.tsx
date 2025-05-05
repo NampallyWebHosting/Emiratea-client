@@ -6,7 +6,7 @@ import Logo from "@/assets/Component 1.svg";
 const AddressCard: React.FC = () => {
     return (
         <div className="min-h-screen bg-[#F4A4C3] flex flex-col items-center justify-center px-4 py-10">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white text-center mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white text-center mb-8 font-Ulm-Grotesk">
                 Address and Opening Hours
             </h1>
             <div className="bg-white w-full max-w-6xl rounded-3xl overflow-hidden">
