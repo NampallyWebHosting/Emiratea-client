@@ -1,4 +1,3 @@
-"use client";
 import React, { JSX, useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -14,22 +13,40 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
     const [selected, setSelected] = useState<Card | null>(null);
     const [lastSelected, setLastSelected] = useState<Card | null>(null);
 
-    const handleClick = (card: Card) => {
-        setLastSelected(selected);
-        setSelected(card);
+    const handleMouseMove = (
+        e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+        card: Card
+    ) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const withinX = x > rect.width * 0.1 && x < rect.width * 0.9;
+        const withinY = y > rect.height * 0.1 && y < rect.height * 0.9;
+
+        if (withinX && withinY) {
+            if (selected?.id !== card.id) {
+                setLastSelected(selected);
+                setSelected(card);
+            }
+        } else {
+            if (selected?.id === card.id) {
+                setSelected(null);
+            }
+        }
     };
 
-    const handleOutsideClick = () => {
+    const handleMouseLeave = () => {
         setLastSelected(selected);
         setSelected(null);
     };
 
     return (
-        <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
+        <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4 relative">
             {cards.map((card, i) => (
                 <div key={i} className={cn(card.className, "")}>
                     <motion.div
-                        onClick={() => handleClick(card)}
+                        onMouseMove={(e) => handleMouseMove(e, card)}
+                        onMouseLeave={handleMouseLeave}
                         className={cn(
                             card.className,
                             "relative overflow-hidden",
@@ -47,9 +64,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
                 </div>
             ))}
             <motion.div
-                onClick={handleOutsideClick}
+                onClick={handleMouseLeave}
                 className={cn(
-                    //   "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
                     "absolute h-full w-full left-0 top-0 z-10",
                     selected?.id ? "pointer-events-auto" : "pointer-events-none"
                 )}
@@ -78,32 +94,16 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
     return (
         <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
             <motion.div
-                initial={{
-                    opacity: 0,
-                }}
-                animate={{
-                    opacity: 0.6,
-                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.6 }}
                 className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
             />
             <motion.div
                 layoutId={`content-${selected?.id}`}
-                initial={{
-                    opacity: 0,
-                    y: 100,
-                }}
-                animate={{
-                    opacity: 1,
-                    y: 0,
-                }}
-                exit={{
-                    opacity: 0,
-                    y: 100,
-                }}
-                transition={{
-                    duration: 0.3,
-                    ease: "easeInOut",
-                }}
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 100 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="relative px-8 pb-4 z-[70]"
             >
                 {selected?.content}

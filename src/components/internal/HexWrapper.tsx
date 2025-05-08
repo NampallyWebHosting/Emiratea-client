@@ -2,7 +2,7 @@ import React from "react";
 
 const HexWrapper: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     return (
-        <div className="relative w-[113.34px] h-[125.15px] md:w-[200px] md:h-[272px] overflow-hidden">
+        <div className="relative w-[279.78px] h-[383px] overflow-hidden -ml-10">
             <svg
                 viewBox="0 0 200 334"
                 preserveAspectRatio="xMidYMid meet"
@@ -14,10 +14,8 @@ const HexWrapper: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
                     </clipPath>
                 </defs>
 
-                {/* Always fill background shape */}
                 <rect width="100%" height="100%" fill="#EC86AD" clipPath="url(#hexClip)" />
 
-                {/* Then children inside clipped area */}
                 {children && (
                     <foreignObject
                         x="0"

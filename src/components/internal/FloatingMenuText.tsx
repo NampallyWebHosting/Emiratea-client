@@ -70,7 +70,7 @@ const MenuScreen: React.FC = () => {
     >
       <div
         ref={containerRef}
-        className="absolute top-4 w-full flex flex-col items-center gap-8 z-20"
+        className="absolute top-4 w-full flex flex-col items-center gap-4 z-20"
       >
         {textLines.map((line, idx) => (
           <div key={idx} className="w-full flex justify-center">
@@ -78,7 +78,7 @@ const MenuScreen: React.FC = () => {
               ref={(el) => {
                 lineRefs.current[idx] = el;
               }}
-              className="flex flex-nowrap gap-2 sm:gap-4 md:gap-6 text-white text-xl md:text-3xl lg:text-6xl lg:font-extrabold font-montserrat-alt text-center whitespace-nowrap" // Add whitespace-nowrap here
+              className="flex flex-nowrap gap-2 sm:gap-4 md:gap-6 text-white text-xl md:text-3xl lg:text-8xl lg:font-extrabold font-montserrat-alt text-center whitespace-nowrap" // Add whitespace-nowrap here
               style={{
                 transform: `translateX(${idx % 2 === 0 ? "40%" : "-40%"})`
               }}
