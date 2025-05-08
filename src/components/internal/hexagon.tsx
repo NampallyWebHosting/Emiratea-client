@@ -21,7 +21,7 @@ const imageUrls = [
 
 const HexagonShapes = () => {
     return (
-        <div className="w-full z-10 pt-[400px] pb-20 flex justify-center">
+        <div className="w-full z-10 pt-[250px] lg:pt-[400px] pb-20 flex justify-center">
             <div className="grid grid-cols-3 lg:grid-cols-5 gap-y-6 lg:gap-x-10">
                 {Array.from({ length: 15 }).map((_, i) => {
                     const isMenuHex = i === 7;

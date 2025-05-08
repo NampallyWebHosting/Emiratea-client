@@ -16,7 +16,7 @@ const InstagramPost: React.FC<{
   timePosted: string;
 }> = ({ username, userImage, postImage, caption, timePosted }) => {
   return (
-    <div className=" max-w-md lg:max-w-xl bg-white border border-gray-300 rounded-2xl shadow-sm mx-2 flex-shrink-0">
+    <div className=" max-w-md lg:max-w-xl bg-white border border-gray-300 rounded-2xl shadow-sm mx-2 flex-shrink-0 overflow-hidden">
       <div className="flex items-center p-4">
         <img
           src={userImage}
