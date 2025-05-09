@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import BGiMAGE from "@/assets/Desktop - 27.svg";
 import Lottie from "lottie-react";
@@ -94,7 +93,7 @@ const cards = [
 const GreenScreen: React.FC = () => {
   return (
     <div
-      className="w-screen h-fit relative overflow-hidden"
+      className="w-full relative overflow-hidden"
       style={{
         backgroundImage: `url(${BGiMAGE})`,
         backgroundPosition: "top center",
@@ -110,7 +109,7 @@ const GreenScreen: React.FC = () => {
         />
       </div>
       {/* Grid below animation */}
-      <div className="relative z-20 mt-10">
+      <div className="relative z-20 mt-10 overflow-hidden">
         <div className="h-screen py-20 w-full">
           <p className=" z-20 text-center font-extrabold text-6xl text-white p-4 font-Ulm-Grotesk">The Place</p>
           <LayoutGrid cards={cards} />

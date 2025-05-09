@@ -6,7 +6,6 @@ import {
 } from "react-icons/fi";
 import { posts } from "../types/data";
 
-
 // Reusable Post Component
 const InstagramPost: React.FC<{
   username: string;
@@ -16,7 +15,7 @@ const InstagramPost: React.FC<{
   timePosted: string;
 }> = ({ username, userImage, postImage, caption, timePosted }) => {
   return (
-    <div className=" max-w-md lg:max-w-xl bg-white border border-gray-300 rounded-2xl shadow-sm mx-2 flex-shrink-0 overflow-hidden">
+    <div className="max-w-md lg:max-w-xl bg-white border border-gray-300 rounded-2xl shadow-sm mx-2 flex-shrink-0 overflow-hidden">
       <div className="flex items-center p-4">
         <img
           src={userImage}
@@ -25,7 +24,11 @@ const InstagramPost: React.FC<{
         />
         <span className="font-semibold">{username}</span>
       </div>
-      <img src={postImage} alt="Instagram post" className=" w-80 h-80 md:w-96 md:h-96 object-cover" />
+      <img
+        src={postImage}
+        alt="Instagram post"
+        className="w-80 h-80 md:w-96 md:h-96 object-cover"
+      />
       <div className="flex justify-between px-4 py-2 text-xl text-gray-700">
         <div className="flex space-x-4">
           <button><FiHeart /></button>
@@ -44,12 +47,12 @@ const InstagramPost: React.FC<{
 
 // Main Feed Component
 const InstagramFeed: React.FC = () => {
-
-
   return (
-    <div className="bg-[#00966C]">
-      <p className=" text-center font-extrabold text-3xl md:text-5xl text-white p-8">Insta-genic</p>
-      <div className="flex flex-row gap-10 overflow-x-auto p-6 lg:p-10">
+    <div className="bg-[#00966C] lg:p-18">
+      <p className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white text-center mb-8 font-Ulm-Grotesk">
+        Insta-genic
+      </p>
+      <div className="flex flex-row gap-10 overflow-x-auto p-6 lg:p-10 scrollbar-hide">
         {posts.map((post, index) => (
           <InstagramPost key={index} {...post} />
         ))}

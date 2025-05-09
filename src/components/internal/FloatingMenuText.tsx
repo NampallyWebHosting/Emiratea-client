@@ -70,7 +70,7 @@ const MenuScreen: React.FC = () => {
     >
       <div
         ref={containerRef}
-        className="absolute top-4 w-full flex flex-col items-center gap-4 z-20"
+        className="absolute top-4 w-full flex flex-col items-center gap-4 z-20 mt-10"
       >
         {textLines.map((line, idx) => (
           <div key={idx} className="w-full flex justify-center">

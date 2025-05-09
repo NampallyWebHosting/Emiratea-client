@@ -65,7 +65,7 @@ const FullScreenImage: React.FC = () => {
     const imageUrl = mainBg;
 
     return (
-        <Card className="w-screen h-screen p-0 border-none rounded-none shadow-none relative">
+        <Card className="w-full h-screen p-0 border-none rounded-none shadow-none relative">
             <CardContent className="w-full h-full p-0 relative">
                 {/* Fullscreen Background Image */}
                 <img

@@ -144,3 +144,11 @@
   -webkit-text-stroke: 1px #4B5563;
   color: white;
 }
+/* index.css */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
