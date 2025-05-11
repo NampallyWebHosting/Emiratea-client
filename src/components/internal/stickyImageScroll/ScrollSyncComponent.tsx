@@ -1,6 +1,7 @@
 import { FC, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import MainImg from "@/assets/Desktop - 25.svg";
+import { motion } from "framer-motion";
 
 // Types
 type ScrollSyncSection = {
@@ -72,21 +73,30 @@ const ScrollSyncComponent: FC<ScrollSyncProps> = ({ sections, className }) => {
             </div>
             {/* Mobile Layout */}
             <div className="md:hidden flex flex-col items-center px-6 pt-10">
-                {sections.map((section) => (
-                    <div key={section.id} className="mb-12 w-full">
-                        {section.image && (
-                            <img
-                                src={section.image}
-                                alt="Content"
-                                className="max-w-full rounded-md mb-4"
-                            />
-                        )}
-                        <h2 className="text-2xl font-extrabold mb-3 text-white">{section.title}</h2>
-                        {section.description && (
-                            <p className="text-white text-base font-normal mb-4">{section.description}</p>
-                        )}
-                    </div>
-                ))}
+                {sections.map((section, index) => {
+                    const isEven = index % 2 === 0;
+                    return (
+                        <div key={section.id} className="mb-12 w-full overflow-hidden">
+                            {section.image && (
+                                <motion.img
+                                    src={section.image}
+                                    alt="Content"
+                                    className=" w-96 h-80 rounded-2xl  "
+                                    initial={{ x: isEven ? -100 : 100, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    viewport={{ once: true, amount: 0.5 }}
+                                    transition={{ type: "tween", duration: 0.6 }}
+                                />
+                            )}
+                            <div className=" mt-4">
+                                <h2 className="text-2xl font-extrabold mb-3 text-white">{section.title}</h2>
+                                {section.description && (
+                                    <p className="text-white text-base font-normal mb-4">{section.description}</p>
+                                )}
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
 
             {/* Desktop Layout */}
