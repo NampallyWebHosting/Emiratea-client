@@ -5,13 +5,13 @@ import Logo from "@/assets/Component 1.svg";
 
 const AddressCard: React.FC = () => {
     return (
-        <div className="bg-[#F4A4C3] flex flex-col items-center justify-center lg:p-18">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white text-center mb-8 font-Ulm-Grotesk">
+        <div className="bg-[#F4A4C3] flex flex-col items-center justify-center py-10 lg:p-18">
+            <h1 className="text-3xl  md:text-5xl lg:text-6xl font-extrabold text-white text-center mb-10 font-Ulm-Grotesk">
                 Address and Opening Hours
             </h1>
-            <Card className="bg-[#00966C] w-[95%] lg:w-[90%] h-[500px] text-white flex flex-col-reverse md:flex-row border-none rounded-4xl p-6 md:p-10 gap-6">
+            <Card className="bg-[#00966C] w-[95%] lg:w-[90%] h-[500px] text-white flex flex-col-reverse md:flex-row border-none rounded-4xl p-2 md:p-6 lg:p-10 gap-6">
                 {/* Left Section */}
-                <div className="flex flex-col justify-between gap-6 w-full md:w-1/2">
+                <div className="flex flex-col justify-between gap-6 w-full md:w-1/2 font-Ulm-Grotesk ml-4 py-2">
                     <div>
                         <p className="text-xl sm:text-2xl font-extrabold">301, Dubai Street,</p>
                         <p className="text-xl sm:text-2xl font-extrabold">Connor Lane</p>
@@ -27,7 +27,7 @@ const AddressCard: React.FC = () => {
                     </div>
                 </div>
                 {/* Right Section with Pin */}
-                <div className="rounded-4xl flex items-center justify-center -mt-8 ml-30">
+                <div className="rounded-4xl  items-center justify-center -mt-8 ml-30 hidden lg:flex">
                     <PinContainer
                         title="/Emiratea"
                         href="#"
@@ -47,6 +47,7 @@ const AddressCard: React.FC = () => {
                         </div>
                     </PinContainer>
                 </div>
+                <div className='w-full h-full bg-white rounded-4xl lg:hidden'></div>
             </Card>
         </div>
     );

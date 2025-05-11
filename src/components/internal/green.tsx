@@ -101,7 +101,7 @@ const GreenScreen: React.FC = () => {
       }}
     >
       {/* Lottie animation */}
-      <div className="absolute top-0 left-0 w-full h-screen z-10 overflow-hidden">
+      <div className="absolute top-0 left-0 w-full min-h-screen z-10 overflow-hidden">
         <Lottie
           animationData={pinkBannerAnimation}
           loop={true}
@@ -109,9 +109,9 @@ const GreenScreen: React.FC = () => {
         />
       </div>
       {/* Grid below animation */}
-      <div className="relative z-20 mt-10 overflow-hidden">
-        <div className="h-screen py-20 w-full">
-          <p className=" z-20 text-center font-extrabold text-6xl text-white p-4 font-Ulm-Grotesk">The Place</p>
+      <div className="relative z-20 lg:mt-10 overflow-hidden py-10">
+        <div className="h-screen lg:py-18 w-full">
+          <p className=" text-3xl  md:text-5xl lg:text-6xl font-extrabold text-white text-center lg:mb-10 font-Ulm-Grotesk">The Place</p>
           <LayoutGrid cards={cards} />
         </div>
       </div>
