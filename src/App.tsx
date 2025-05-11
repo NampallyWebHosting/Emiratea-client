@@ -1,16 +1,16 @@
-import AddressCard from './components/internal/AddressCard'
-import FullScreenSvgImage from './components/internal/dummy'
-import Footer from './components/internal/Footer'
-import GreenScreen from './components/internal/green'
-import InstaGenic from './components/internal/instaGenic'
-import Main from './components/internal/main'
-import MenuScreen from './components/internal/FloatingMenuText'
+import AddressCard from './components/internal/addressCard/AddressCard'
+import GreenScreen from './components/internal/heroGrid/green'
+import Main from './components/internal/header/HeroWithNav'
+import MenuScreen from './components/internal/animatedMenu/FloatingMenuText'
+import InstaGenic from './components/internal/instaGenic/InstaGenic'
+import Footer from './components/internal/footer/Footer'
+import Page from './components/internal/stickyImageScroll/ScrollSync'
 
 const App = () => {
   return (
     <>
       <Main />
-      <FullScreenSvgImage />
+      <Page/>
       <MenuScreen />
       <GreenScreen />
       <AddressCard />

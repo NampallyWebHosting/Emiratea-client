@@ -1,5 +1,5 @@
-import HexWrapper from "./HexWrapper";
 import { motion } from "framer-motion";
+import HexWrapper from "./HexWrapper";
 
 // List of image URLs (15 - 1 = 14 since index 7 will have "Menu" text)
 const imageUrls = [
@@ -21,8 +21,8 @@ const imageUrls = [
 
 const HexagonShapes = () => {
     return (
-        <div className="w-full z-10 pt-[250px] lg:pt-[550px] pb-40 flex justify-center">
-            <div className="grid grid-cols-3 lg:grid-cols-5 gap-y-34 lg:gap-x-20">
+        <div className="w-full z-10 pt-[220px] md:pt-[350px] lg:pt-[550px] pb-10 md:pb-40 flex justify-center">
+            <div className="grid grid-cols-3 lg:grid-cols-5 gap-y-2 md:gap-y-36 lg:gap-y-34 md:gap-x-14 lg:gap-x-20">
                 {Array.from({ length: 15 }).map((_, i) => {
                     const isMenuHex = i === 7;
                     const imageUrl = !isMenuHex ? imageUrls[i < 7 ? i : i - 1] : null;

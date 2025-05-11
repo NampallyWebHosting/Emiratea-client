@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
-import MainImg from "../../assets/Desktop - 25.svg";
+import MainImg from "@/assets/Desktop - 25.svg";
 
 // Types
 type ScrollSyncSection = {

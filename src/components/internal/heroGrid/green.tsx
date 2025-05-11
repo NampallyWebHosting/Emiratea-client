@@ -1,7 +1,7 @@
 import React from "react";
 import BGiMAGE from "@/assets/Desktop - 27.svg";
 import Lottie from "lottie-react";
-import pinkBannerAnimation from "../../assets/Pink banner animation fixed.json";
+import pinkBannerAnimation from "../../../assets/Pink banner animation fixed.json";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 
 // --- LAYOUT GRID CONTENT COMPONENTS ---

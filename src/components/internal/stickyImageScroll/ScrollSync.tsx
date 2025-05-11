@@ -1,7 +1,7 @@
+import contentImag1 from "@/assets/leafLeft.svg";
+import contentImag2 from "@/assets/leafStraight.svg";
+import contentImag3 from "@/assets/leafBottom.svg";
 import ScrollSyncComponent from "./ScrollSyncComponent";
-import contentImag1 from "../../assets/leafLeft.svg";
-import contentImag2 from "../../assets/leafStraight.svg";
-import contentImag3 from "../../assets/leafBottom.svg";
 
 const dummySections = [
   {

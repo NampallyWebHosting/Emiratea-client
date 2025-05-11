@@ -1,7 +1,7 @@
 import React from "react";
-import OLIGARCH_LOGO from "../../assets/Group 22.svg";
+import OLIGARCH_LOGO from "@/assets/Group 22.svg";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 const Footer: React.FC = () => {
     return (
         <footer className=" bg-[#011C15] text-white w-full flex flex-col px-4 py-10 overflow-hidden">

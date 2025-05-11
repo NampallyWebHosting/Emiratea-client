@@ -1,9 +1,9 @@
 import React from "react";
-import { Card, CardContent } from "../ui/card";
-import nav1 from "../../assets/nav1.svg";
-import nav2 from "../../assets/nav2.svg";
-import nav3 from "../../assets/nav3.svg";
-import Logo from "../../assets/Logo.svg";
+import { Card, CardContent } from "../../ui/card";
+import nav1 from "@/assets/nav1.svg";
+import nav2 from "@/assets/nav2.svg";
+import nav3 from "@/assets/nav3.svg";
+import Logo from "@/assets/Logo.svg";
 import mainBg from "@/assets/Desktop - 24.svg"
 
 interface MenuItemProps {

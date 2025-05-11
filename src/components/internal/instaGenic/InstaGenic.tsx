@@ -1,10 +1,10 @@
+import { posts } from "@/components/types/data";
 import React from "react";
 import {
   FiHeart,
   FiMessageCircle,
   FiSend,
 } from "react-icons/fi";
-import { posts } from "../types/data";
 
 // Reusable Post Component
 const InstagramPost: React.FC<{
@@ -48,7 +48,7 @@ const InstagramPost: React.FC<{
 // Main Feed Component
 const InstagramFeed: React.FC = () => {
   return (
-    <div className="bg-[#00966C] py-10 lg:p-18">
+    <div className="bg-[#00966C] py-10 lg:py-18">
       <p className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white text-center mb-8 font-Ulm-Grotesk">
         Insta-genic
       </p>

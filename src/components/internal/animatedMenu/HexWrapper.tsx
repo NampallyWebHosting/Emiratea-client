@@ -2,7 +2,7 @@ import React from "react";
 
 const HexWrapper: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     return (
-        <div className="relative w-[279.78px] h-[383px] overflow-hidden -ml-10">
+        <div className="relative w-[113.34px] h-[125.15px] md:w-[279.78px] md:h-[383px] overflow-hidden md:-ml-10">
             <svg
                 viewBox="0 0 200 334"
                 preserveAspectRatio="xMidYMid meet"
